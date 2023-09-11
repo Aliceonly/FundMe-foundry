@@ -1,66 +1,16 @@
-## Foundry
+forge Forked Tests
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+1. Unit: Testing a single function
+2. Integration: Testing multiple functions
+3. Forked: Testing on a forked network
+4. Staging: Testing on a live network (testnet or mainnet)
 
-Foundry consists of:
+Mocking:
+// 1.Deploy mocks when we are on a local anvil chain
+// 2.Keep track of contract address across different chains
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Fork Test:
+创造HelperConfig.sol通过new NetworkConfig通过block.chainid进行跨链判断
+传入不同网络的PriceFeed地址
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Magic Number : init number above contract
