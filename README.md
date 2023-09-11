@@ -16,3 +16,5 @@ Fork Test:
 Magic Number : init number above contract
 
 引入modifier用于测试
+
+引入Interaction脚本进行一体化Integration跨链测试
