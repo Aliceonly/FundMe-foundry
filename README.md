@@ -14,3 +14,5 @@ Fork Test:
 传入不同网络的PriceFeed地址
 
 Magic Number : init number above contract
+
+引入modifier用于测试
